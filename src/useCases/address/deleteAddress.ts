@@ -15,8 +15,8 @@ export async function deleteAddress(req: Request, res: Response) {
   try {
     await Address.deleteOne({ _id: id });
 
-    res.status(200).json({ message: 'Address removed successfully!' });
-  } catch (err) {
-    res.status(500).json({ erro: err });
+    res.status(200).send({ message: 'Address removed successfully!' });
+  } catch (err: any) {
+    res.status(500).json({ erro: err.message });
   }
 }

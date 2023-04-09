@@ -2,8 +2,10 @@ import { Request, Response } from 'express';
 
 import { Address } from '../../models/Address';
 
-export async function createAddress(req: Request, res: Response):Promise<void> {
-  
+export async function createAddress(
+  req: Request,
+  res: Response
+): Promise<void> {
   try {
     const { street, number, complement, district, city, state, zipCode } =
       req.body;

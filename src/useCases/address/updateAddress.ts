@@ -27,6 +27,6 @@ export async function updateAddress(req: Request, res: Response) {
 
     res.status(200).send(newAddress);
   } catch (err: any) {
-    res.status(500).json({ erro: err.message });
+    res.status(500).json({ erro: err.Error.message });
   }
 }

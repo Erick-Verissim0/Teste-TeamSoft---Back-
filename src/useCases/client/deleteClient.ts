@@ -16,7 +16,7 @@ export async function deleteClient(req: Request, res: Response) {
     await Client.deleteOne({ _id: id });
 
     res.status(200).json({ message: 'Client removed successfully!' });
-  } catch (error) {
-    res.status(500).json({ erro: error });
+  } catch (err: any) {
+    res.status(500).json({ erro: err.message });
   }
 }

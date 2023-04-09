@@ -8,6 +8,6 @@ export async function listAddress(req: Request, res: Response) {
 
     res.json(address);
   } catch (err: any) {
-    res.status(500).json({ err: err.message });
+    res.status(500).json({ erro: err.message });
   }
 }

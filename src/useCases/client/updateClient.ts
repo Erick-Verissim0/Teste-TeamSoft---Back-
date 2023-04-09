@@ -23,7 +23,7 @@ export async function updateClient(req: Request, res: Response) {
     }
 
     res.status(200).send(newClient);
-  } catch (err) {
-    console.log(err);
+  } catch (err: any) {
+    res.status(500).json({ erro: err.message });
   }
 }
